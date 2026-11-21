@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "拾流 · 网页媒体下载",
+  "version": "0.1.1",
+  "description": "识别当前标签页的影音与图片，保存到拾流桌面下载队列。",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw6ANvjY5gL2w9rzIFquXWk6snuFjT5Cf+WEyAoqYOdsBaNfDVFh2POo3OrYYBIpay677k3h5vdRNKcr7dRHGzLo/b6oTlKWNWuE3/e4qWZ/vlO8l6BNcZnZRuJdlo1rhVAg4AzQ6592JGXoFx9sz7FlDeAeRp9AsPAkD6QuHZbaWjb46nOYDvz3TYgdWeVm10NX25h081mKSfyWRIBE5sjrv3qbfHAOorJsgtx0l1UIFGE6/gbyIvgh2L4uSsfYvfVxWlG4Sx17Ox5j7iHNTItFphlx2bTDVUAR3Uo9tgA+qWzstoHr3Ey1/4nwC0BzS3QtDUakHH99h6RwYpD+iDwIDAQAB",
+  "permissions": [
+    "nativeMessaging",
+    "webRequest",
+    "scripting",
+    "storage",
+    "activeTab",
+    "webNavigation",
+    "alarms"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "拾流 · 当前页资源"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}

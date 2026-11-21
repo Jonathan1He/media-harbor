@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+/artifacts/
+/tasks/
+/output/*
+!/output/desktop-preview.png
+/data/
+/build/
+/dist/
+*.sqlite3*
+*.key
+.env

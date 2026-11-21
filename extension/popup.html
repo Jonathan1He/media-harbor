@@ -1,0 +1,6 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>拾流 · 当前页资源</title><link rel="stylesheet" href="popup.css">
+<header><strong>拾流</strong><span>当前页资源</span></header>
+<main><section id="platform" hidden><h2 id="title"></h2><div class="row"><button id="inspect">读取画质</button><select id="quality" aria-label="下载画质"><option value="auto">自动 · 优先 1080p</option></select></div><div class="row"><button class="primary" id="download">下载视频</button><button id="audio">仅保存音频</button></div><details><summary>使用当前登录状态</summary><p>如果需要账号，请先在本页官网登录并开始播放。拾流只读取本页播放器提供的媒体地址。</p><button id="session">用当前播放器重试</button></details></section>
+<div class="row tabs"><button id="mediaTab" aria-pressed="true">影音</button><button id="imageTab" aria-pressed="false">图片</button><button id="refresh">刷新</button></div>
+<div id="items"></div><div class="row" id="batch" hidden><label><input id="all" type="checkbox">全选</label><button class="primary" id="save">保存所选图片</button></div><p id="status" role="status"></p></main><script src="popup.js"></script></html>
+
